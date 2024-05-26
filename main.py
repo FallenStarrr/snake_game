@@ -15,7 +15,16 @@ class Snake:
   pass
 
 class Food:
-  pass
+     
+     def __init__(self) -> None:
+         
+         x = random.randint(0,  int((GAME_WIDTH/SPACE_SIZE)) - 1) * SPACE_SIZE
+         y = random.randint(0,  int((GAME_HEIGHT/SPACE_SIZE)) - 1) * SPACE_SIZE
+         print(x, y)
+         self.coordinates = [x, y]
+
+         canvas.create_oval(x,y, x + SPACE_SIZE, y + SPACE_SIZE, fill=FOOD_COLOR, tag="food")
+        
 
 def next_turn():
   pass
